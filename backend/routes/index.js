@@ -1,5 +1,6 @@
 import express from "express";
-import { home } from "../controller/index.js";
+import { addTodo, getTodos } from "../controller/index.js";
 
 export const router = express.Router();
-router.get("/", home);
+router.get("/", getTodos);
+router.post("/add", addTodo);
